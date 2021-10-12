@@ -1,5 +1,6 @@
 import javafx.application.Application;
 import javafx.geometry.HPos;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -68,6 +69,7 @@ public class BuscarYReemplazar extends Application {
         VBox botonesDerecha = new VBox();
         botonesDerecha.getChildren().addAll(reemTodoBoton, cerrarBoton, ayudaBoton);
         botonesDerecha.setSpacing(5);
+        //botonesDerecha.setPadding(new Insets(5));
 
         GridPane rootPane = new GridPane();
         rootPane.setGridLinesVisible(false);
@@ -75,6 +77,7 @@ public class BuscarYReemplazar extends Application {
         rootPane.setHgap(5);
         rootPane.setAlignment(Pos.TOP_CENTER);
         rootPane.addRow(0, buscarLabel, buscarText, buscarBoton);
+        rootPane.setPadding(new Insets(5));
         rootPane.addRow(1, reemplazarLabel, reemplazarText, reemplazarBoton);
         rootPane.addRow(2, new Label(""), botonera, botonesDerecha);
 
